@@ -1,0 +1,22 @@
+@model CarsInventoryMvc.Models.Car
+
+<h1>Edit</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Brand"></label>
+        <input asp-for="Brand" class="form-control" />
+        <span asp-validation-for="Brand" class="text-danger"></span>
+    </div>
+    <!-- Repeat for other properties -->
+
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
+
+<p>
+    <a asp-action="Index">Back to List</a>
+</p>

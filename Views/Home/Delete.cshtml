@@ -1,0 +1,22 @@
+@model CarsInventoryMvc.Models.Car
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Brand: @Model.Brand</h4>
+    <h4>Model: @Model.Model</h4>
+    <h4>Year: @Model.Year</h4>
+    <h4>Price: @Model.Price</h4>
+    <h4>New: @Model.New</h4>
+</div>
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <input type="submit" value="Delete" class="btn btn-danger" />
+    </div>
+</form>
+
+<p>
+    <a asp-action="Index">Back to List</a>
+</p>
